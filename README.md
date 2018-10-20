@@ -4,9 +4,7 @@ __myTinyTodo__ is a simple, self-hosted way to manage to your lists.
 ### About this Fork
 [myTinyTodo](http://www.mytinytodo.net/) is a web application developed by Max Pozdeev. Since development was abandoned in 2014, this fork (based on v1.4.3) aims at updating and enhancing the application. Currently, this includes the following:
 
-- Support for _php7_
-- Added a German translation
-- When accessing the app with a mobile device, one is automatically redirected to the optimized mobile version
+- Corrected issue that sorting method per list was saved, but not used more than once
 
 ### Requirements
 A web server, which supports php, such as Apache or NGINX. Make sure the web server supports the following:
