@@ -70,7 +70,12 @@ if (isset($_GET['loadLists'])) {
     $s = trim(_get('s'));
     if ($s != '') $sqlWhere .= " AND (title LIKE " . $db->quoteForLike("%%%s%%", $s) .
         " OR note LIKE " . $db->quoteForLike("%%%s%%", $s) . ")";
-    $sort = (int)_get('sort');
+
+//    $sort = (int)_get('sort');
+// baswi: replaced previous line with next one; looks like that the sorting value of a specific list is stored in the dataase
+// have I tested, is stored in mtt_lists->sorting; the sorting value should here be read from the database
+    $sort = (int) $db->sq("SELECT sorting FROM {$db->prefix}lists WHERE id=$listId");
+
     $sqlSort = "ORDER BY compl ASC, ";
     if ($sort == 1) $sqlSort .= "prio DESC, ddn ASC, duedate ASC, ow ASC";        // byPrio
     elseif ($sort == 101) $sqlSort .= "prio ASC, ddn DESC, duedate DESC, ow DESC";    // byPrio (reverse)
