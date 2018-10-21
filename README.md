@@ -19,3 +19,9 @@ Execute the following steps to install myTinyTodo on your server (taken from htt
 2. Run _setup.php_, select and specify settings of database you prefer. For sqlite usage make sure that database file _db/todolist.db_ is writable for _webserver/php_. Then click _Install_ to create tables in database. It's recommended to delete this file after installation.
 3. To protect your tasks from modification by the others you may specify password in settings. By default session files are stored in _tmp/sessions_ directory. Make sure it's writable for _webserver/php_.
 4. Open _index.php_ in your browser to run the application. Then go to _Settings_ and specify your time zone.
+
+### Tips, usage
+With URL parameters it is possible to directly show a certain list 
+    Laptop: mtt_url/?list=1
+    Smartphone: mtt_url/?list=1&pda=
+
