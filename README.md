@@ -22,6 +22,6 @@ Execute the following steps to install myTinyTodo on your server (taken from htt
 
 ### Tips, usage
 With URL parameters it is possible to directly show a certain list 
-    Laptop: mtt_url/?list=1
-    Smartphone: mtt_url/?list=1&pda=
+- Laptop: mtt_url/?list=1
+- Smartphone: mtt_url/?list=1&pda=
 
